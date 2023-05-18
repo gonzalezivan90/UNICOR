@@ -660,7 +660,7 @@ def RasterToNWeights(resgrid):
 	#rastervalues[rastervalues == NODATA_value] = 1000000
 
 	# Create array
-	dt = np.dtype((np.float,(3,)))
+	dt = np.dtype((float,(3,)))
 	nWeightPairs = np.zeros((nrows,ncols,8),dtype=dt)
 		
 	# Store x and y locations of each raster pixel 
@@ -818,7 +818,7 @@ def RasterToNWeights2(resgrid):
 	#rastervalues[rastervalues == NODATA_value] = 1000000
 
 	# Create array
-	dt = np.dtype((np.float,(3,)))
+	dt = np.dtype((float,(3,)))
 	nWeightPairs = np.zeros((nrows,ncols,8),dtype=dt)
 		
 	# Store x and y locations of each raster pixel 
@@ -1132,7 +1132,7 @@ def RasterToBarrierDirection(resgrid,elevgrid,barrgrid,dirtype):
 	# Note that resistance and barrier file defines extent of streams (overrides elevation file), elvation file can be entire grid not confined to stream extent.
 	
 	# Create array
-	dt = np.dtype((np.float,(3,)))
+	dt = np.dtype((float,(3,)))
 	nWeightPairs = np.zeros((nrows,ncols,8),dtype=dt)
 		
 	# Store x and y locations of each raster pixel 
@@ -2108,7 +2108,7 @@ def RasterToBarrierDirection_Conductance(resgrid,elevgrid,barrgrid,dirtype):
 	# Still need resistance for direction, if using conductance then 1/conductance to get resistance. if 0 conducation assume complete barrier
 	
 	# Create array: x,y,resistance,conductance
-	dt = np.dtype((np.float,(4,)))
+	dt = np.dtype((float,(4,)))
 	nWeightPairs = np.zeros((nrows,ncols,8),dtype=dt)
 		
 	# Store x and y locations of each raster pixel 
@@ -3179,7 +3179,7 @@ def RasterToWindSpeedDirection(resgrid,elevgrid,barrgrid,maxres,minres):
 	
 	# Create array: x,y,resgrid cost, wind speed, 1 - wind direction probability,
 	# x,y,Euclidean cost, wind speed - at end will calculate wind speed to resistance
-	dt = np.dtype((np.float,(4,)))
+	dt = np.dtype((float,(4,)))
 	nWeightPairs = np.zeros((nrows,ncols,8),dtype=dt)
 		
 	# Store x and y locations of each raster pixel 
@@ -3803,7 +3803,7 @@ def RasterToHikingWeights(resgrid,elevgrid,maxres,A,B,minres):
 	# Sum up the resgrid cost and speed. 
 	
 	# Create array: x,y,resgrid cost 
-	dt = np.dtype((np.float,(3,)))
+	dt = np.dtype((float,(3,)))
 	nWeightPairs = np.zeros((nrows,ncols,8),dtype=dt)
 		
 	# Store x and y locations of each raster pixel 
